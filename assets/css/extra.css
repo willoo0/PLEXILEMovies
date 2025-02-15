@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.text {
+    flex: 1;
+    max-width: 800px;
+    text-align: left;
+}
+
+.text h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 0.95rem; 
+    color: #bbb; 
+    line-height: 1.6;
+}
+
+.image {
+    flex: 1;
+    max-width: 500px;
+    margin-top: 15px;
+}
+
+.image img {
+    width: 530px;
+    height: 530px;
+    border-radius: 10px;
+}
+
+.watch-now-button {
+    background-color: #C93131;
+    color: #fff;
+    font-size: 15px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(201, 49, 49, 0.5);
+    transition: all 0.3s ease;
+}
+
+.watch-now-button:hover {
+    box-shadow: 0 12px 25px rgba(201, 49, 49, 0.6); 
+    transform: translateY(-1px); 
+}

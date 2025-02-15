@@ -1,11 +1,11 @@
 body {
   margin: 0;
-  background-color: #141212;
-  overflow: hidden;
   height: 100vh;
+  background-color: #141212;
+  overflow-x: hidden;
   position: relative;
   font-family: Arial, sans-serif;
-  display: flex;
+  display: flex;  
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@ body {
 }
 
 .diagonal-glow {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 400px;
@@ -91,4 +91,14 @@ h3 {
 
 #headline {
   margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5C2C2C;
+  height: 2px;
 }

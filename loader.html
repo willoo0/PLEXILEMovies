@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>PLEXILE Movies - Loader</title>
+    <link rel="manifest" href="/manifest.json"/>
+    <link rel="icon" type="image/png" href="/assets/images/logo.png"/>
+    <link rel="shortcut icon" href="/assets/images/logo.png"/>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <meta name="theme-color" content="#412525">
+    <meta name="description" content="Explore the Thousands of Movies/Shows!"/>
+    <meta property="og:title" content="PLEXILE Movies"/>
+    <meta property="og:description" content="Explore the Thousands of Movies/Shows!"/>
+    <meta property="og:image" content="/assets/images/ogimage.png"/>
+    <meta name="keywords" content="watch movies, movies online, watch TV, TV online, TV shows online, watch TV shows, stream movies, stream tv, instant streaming, watch online, movies, watch movies United States, watch TV online, no download, full length movies watch online, movies online, movies, watch movies online, watch movies, watch movies online free, watch movies for free, watch streaming media, watch tv online, watch movies online, watch movies online free, watch movies for free, watch streaming media, watch tv online">
+    <meta property="og:image:alt" content="PLEXILE Movies"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://plexilemovies.xyz/"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="PLEXILE Movies"/>
+    <meta name="twitter:description" content="Explore the Thousands of Movies/Shows!"/>
+    <meta name="twitter:image" content="/assets/images/ogimage.png"/>
+
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <link rel="stylesheet" href="/assets/css/loader.css"/>
+    <link rel="stylesheet" href="/assets/css/navbar.css" />
+
+    <style> 
+body::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0a0a0a; 
+    z-index: 1; 
+}
+
+body > .loader-container {
+    position: relative;
+    z-index: 2; 
+}
+
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.spinner {
+    border: 5px solid #C93131;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 0.8s linear infinite;
+    margin-right: 15px;
+    border-top: 5px solid transparent;
+}
+
+.loading-text {
+    font-weight: bold;
+    color: #e6e1e1;
+    font-size: 18px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+    </style>
+</head>
+<body>
+    <div class="loader-container">
+        <div class="spinner"></div>
+        <span class="loading-text">LOADING MOVIES/SHOWS, PLEASE WAIT...</span>
+    </div>
+
+</body>
+</html>

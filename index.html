@@ -6,8 +6,8 @@
     <title>PLEXILE Movies</title>
     <meta charset="UTF-8"/>
     <link rel="manifest" href="/manifest.json"/>
-    <link rel="icon" type="image/png" href="https://cdn.glitch.global/2c4d9217-a211-40c8-af8e-3328b0dc7b43/logo.png?v=1734943341025"/>
-    <link rel="shortcut icon" href="https://cdn.glitch.global/2c4d9217-a211-40c8-af8e-3328b0dc7b43/logo.png?v=1734943341025"/>
+    <link rel="icon" type="image/png" href="/assets/images/logo.png"/>
+    <link rel="shortcut icon" href="/assets/images/logo.png"/>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="theme-color" content="#412525">
@@ -15,7 +15,8 @@
     <meta name="description" content="Explore the Thousands of Movies/Shows!"/>
     <meta property="og:title" content="PLEXILE Movies"/>
     <meta property="og:description" content="Explore the Thousands of Movies/Shows!"/>
-    <meta property="og:image" content="https://cdn.glitch.global/2c4d9217-a211-40c8-af8e-3328b0dc7b43/ogimage.png?v=1735103743836"/>
+    <meta property="og:image" content="/assets/images/ogimage.png"/>
+    <meta name="keywords" content="watch movies, movies online, watch TV, TV online, TV shows online, watch TV shows, stream movies, stream tv, instant streaming, watch online, movies, watch movies United States, watch TV online, no download, full length movies watch online, movies online, movies, watch movies online, watch movies, watch movies online free, watch movies for free, watch streaming media, watch tv online, watch movies online, watch movies online free, watch movies for free, watch streaming media, watch tv online">
     <meta property="og:image:alt" content="PLEXILE Movies"/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
@@ -24,70 +25,225 @@
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="PLEXILE Movies"/>
     <meta name="twitter:description" content="Explore the Thousands of Movies/Shows!"/>
-    <meta name="twitter:image" content="https://cdn.glitch.global/2c4d9217-a211-40c8-af8e-3328b0dc7b43/ogimage.png?v=1735103743836"/>
+    <meta name="twitter:image" content="/assets/images/ogimage.png"/>
+    <meta name="google-adsense-account" content="ca-pub-1640934413378596">
 
-    <!-- CSS -->
+    <!-- CSS -->    
     <link rel="stylesheet" href="/assets/css/main.css"/>
-    <link rel="stylesheet" href="/assets/css/search.css"/>
+    <link rel="stylesheet" href="/assets/css/loader.css"/>
+    <link rel="stylesheet" href="/assets/css/index.css"/>
     <link rel="stylesheet" href="/assets/css/navbar.css"/>
     
   </head>
   <body>
     <div class="navbar">
       <a href="/" class="logo">
-        <img src="https://cdn.glitch.global/2c4d9217-a211-40c8-af8e-3328b0dc7b43/banner.png?v=1734935191386" alt="PLEXILE Movies"/>
+        <img src="/assets/images/banner.png" alt="PLEXILE Movies"/>
       </a>
 
       <div class="menu-container">
         <a class="boxez">
-          <img src="https://cdn.glitch.global/2c4d9217-a211-40c8-af8e-3328b0dc7b43/menu.png?v=1735115301846" alt="Menu"/>
+          <img src="/assets/images/menu.png" alt="Menu" />
         </a>
         <div class="dropdown-box">
+          <a href="/search.html" class="dropdown-item">
+            <i class='bx bx-search'></i>
+            <span>Search  </span>
+          </a>
           <a href="/settings.html" class="dropdown-item">
             <i class="bx bx-cog"></i>
-            <span>Settings</span>
-          </a>
-          <a href="/about.html" class="dropdown-item">
-            <i class="bx bx-info-circle"></i>
-            <span>About Us</span>
+            <span></i>Settings</span>
           </a>
         </div>
       </div>
     </div>
 
-    <br/><br/>
-    <div class="content"></div>
-  </body>
+    <br/><br>
+     <div class="content"></div>
+   </body>
 
   <div class="diagonal-glow"></div>
   <div class="particles" id="particles"></div>
 
-  <h3 id="headline" onclick="toggleText()">
-    <span id="typing-text"></span>
-  </h3>
+  <div class="container">
+    <div class="text">
+      <h2>Watching <span class="highlight">Movies & Shows</span> the Better Way.</h2>
+          <p class="description">
+            PLEXILE Movies is not responsible for any actions taken while using this service.
+            By accessing this service, you are agreeing to our <a href="/tos.html" class="link">Terms of Service</a> and 
+            <a href="/privacypolicy.html" class="link">Privacy Policy</a>. For <br>DMCA-related inquiries, 
+            <a href="/dmca.html" class="link">Click Here</a>.
+        </p>
+        <button class="watch-now-button" onclick="window.location.href='/search.html';">Watch Now!</button>
+      </div>
+    <div class="image">
+        <img src="/assets/images/movies.png" alt="Movies">
+    </div>
+</div>
+<br>
+
+<div class="movies-list">
+  <div class="movies-track" id="track1">
+    <div class="movies-item"><img src="/assets/images/posters/1.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/2.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/3.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/4.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/5.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/6.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/7.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/8.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/9.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/10.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/11.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/12.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/13.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/14.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/15.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/16.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/17.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/18.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/19.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/20.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/21.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/22.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/23.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/24.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/25.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/26.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/27.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/28.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/29.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/30.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/31.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/32.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/33.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/34.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/35.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/36.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/37.png" alt="Poster"></div>
+  </div>
+</div>
+
+<div class="movies-list">
+  <div class="movies-track reverse" id="track2">
+    <div class="movies-item"><img src="/assets/images/posters/38.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/39.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/40.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/41.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/42.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/43.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/44.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/45.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/46.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/47.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/48.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/49.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/50.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/51.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/52.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/53.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/54.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/55.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/56.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/57.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/58.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/59.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/60.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/61.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/62.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/63.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/64.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/65.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/66.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/67.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/68.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/69.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/70.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/71.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/72.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/73.png" alt="Poster"></div>
+    <div class="movies-item"><img src="/assets/images/posters/74.png" alt="Poster"></div>
+  </div>
+</div>
+
+<div class="container2">
+  <div class="text2">
+    <h2>Check out our <span class="highlight">Reviews.</span></h2>
+        <p class="description2">
+          Read real reviews from our users and see how our service has made a difference!
+      </p>
+
+<div class="reviews-container">
+  <div class="reviews">
+      <div class="review">
+          <img src="/assets/images/users/1.png" alt="User">
+          <h3>PLEXILE Network</h3>
+          <p>"plexilemovies.xyz very very very very very very good"</p>
+      </div>
+      <div class="review">
+          <img src="/assets/images/users/2.png" alt="User">
+          <h3>JRDN</h3>
+          <p>"movie-web.app is the #1 top g but we are #2 top g!!!"</p>
+      </div>
+      <div class="review">
+          <img src="/assets/images/users/3.png" alt="User">
+          <h3>frogiee1</h3>
+          <p>"THOSE WHO DRINK EGGNOGTHOSE WHO DRINK EGGNOG."</p>
+      </div>
+        <div class="review">
+          <img src="/assets/images/users/4.png" alt="User">
+          <h3>CAuXTIK𒉭</h3>
+          <p>"very good but like theres already a bunch of sites like that tho/..."</p>
+      </div>
+        <div class="review">
+          <img src="/assets/images/users/5.png" alt="User">
+          <h3>Jobi</h3>
+          <p>"*freaky* movie site 👍 also (imo) the top nav bar is a lil empty"</p>
+      </div>
+        <div class="review">
+          <img src="/assets/images/users/6.png" alt="User">
+          <h3>nobodycares</h3>
+          <p>"you should use lightgo.app/bare/ (very fast, speedy, reliable bare)"</p>
+      </div>
+        <div class="review">
+          <img src="/assets/images/users/7.png" alt="User">
+          <h3>U.S</h3>
+          <p>"We are SO getting DMCA'd with this one 🗣️🗣️🗣️🔥🔥🔥🔥"</p>
+      </div>
+        <div class="review">
+          <img src="/assets/images/users/8.png" alt="User">
+          <h3>Camouflage</h3>
+          <p>"why when I click on typewriter text it gives me my ip???????"</p>
+      </div>
+      <div class="review">
+          <img src="/assets/images/users/9.png" alt="User">
+          <h3>he29k</h3>
+          <p>"Good site but has ads but atleast we can disable them."</p>
+      </div>
+  </div>
+</div>
+<br>
 
   <body>
-    <div id="search-container">
-      <div id="search-bar">
-        <i class="bx bx-search"></i>
-        <input type="text" placeholder="Search for Movies..." readonly />
-        <div class="hover-glow"></div>
-      </div>
-    </div>
-
-    <div id="overlay">
-      <div id="overlay-search-bar">
-        <i class="bx bx-search"></i>
-        <input type="text" id="overlay-search-input" class="overlay-search-bar" placeholder="Search for Movies..."/>
-      </div>
-
-      <div class="boxes-container" id="boxesContainer"></div>
-    </div>
-
+    
+    <!-- Scripts -->
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
     <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/loader.js" defer></script>
     <script src="/assets/js/search.js" defer></script>
     <script src="/assets/js/overlay.js" defer></script>
     <script src="/assets/js/highlight.js" defer></script>
+    <script src="/assets/js/mobile.js" defer></script>
+    <script src="/assets/js/settings.js" defer></script>
     <script src="/assets/js/navbar.js" defer></script>
+    <script src="/assets/js/posters.js" defer></script>
+
+    <!-- Settings Scripts -->
+    <script src="/assets/js/settings/ads.js" defer></script>
+    <script src="/assets/js/settings/anticlosing.js" defer></script>
+    <script src="/assets/js/settings/api.js" defer></script>
+    <script src="/assets/js/settings/passwordprotection.js" defer></script>
+    <script src="/assets/js/settings/videosources.js" defer></script>
+
   </body>
 </html>

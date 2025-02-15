@@ -1,0 +1,32 @@
+body {
+    height: 100vh;
+  }
+
+ .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.text h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 0.95rem; 
+    color: #bbb; 
+    line-height: 1.6;
+}

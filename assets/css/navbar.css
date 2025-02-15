@@ -1,21 +1,9 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #111111;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 4%;
   width: 45%;
   height: 60px;
-  background-color: #2e2424;
-  border-radius: 10px;
+  background-color: #2e2424;  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -115,26 +103,24 @@ body {
 
 .dropdown-box {
   position: absolute;
-  background-image: linear-gradient(to right, #402626 70%, rgba(64, 38, 38, 0) 130%);
   padding: 4px 12px;
   border-radius: 6px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
   font-family: "Arial", sans-serif;
   pointer-events: none;
   z-index: 10;
   width: 120px;
   left: -90px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.dropdown-box::before {
+.dropdown-item::before {
   content: "";
   position: absolute;
   bottom: 2px;
-  left: 30px;
+  left: 0px;
   width: 40px;
   height: 40px;
   background: rgba(201, 49, 49, 0.4);
@@ -147,35 +133,63 @@ body {
 
 .dropdown-box.visible {
   opacity: 1;
-  transform: translateY(17px);
+  transform: translateY(15px);
   pointer-events: auto;
 }
 
 .dropdown-item {
   display: flex;
   align-items: center;
-  text-decoration: none;
+  justify-content: center;
+  background-color: #302323;
   color: #d9cccc;
   font-size: 14px;
-  padding: 6px 0;
+  text-decoration: none;
+  padding: 9px 14px;
+  border-radius: 7px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 10px #161010;
   position: relative;
-  transition: color 0.3s ease;
+  overflow: hidden; 
+  left: 13px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(104, 42, 42); 
 }
 
 .dropdown-item i {
-  font-size: 18px;
-  margin-right: 10px;
+  font-size: 16px;
+  margin-right: 5px;
   transition: color 0.3s ease;
 }
 
 .dropdown-item span {
   position: relative;
+  margin-right: 20px;
 }
 
-.dropdown-item:hover {
-  color: #bfaeae;
+.dropdown-box.visible .dropdown-item {
+  opacity: 1; 
+  transform: none; 
+  transition: none; 
 }
 
-.dropdown-item:hover i {
-  color: #bfaeae;
+.dropdown-box.visible .dropdown-item:nth-child(2) {
+  opacity: 0; 
+  transform: translateY(-10px); 
+  animation: dropdown-fade 0.2s ease forwards; 
+  animation-delay: 0.2s; 
+}
+
+@keyframes dropdown-fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

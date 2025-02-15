@@ -1,4 +1,4 @@
-document.querySelectorAll(".logo, .boxez").forEach((box) => {
+document.querySelectorAll(".logo, .boxez, .dropdown-item, .tab-cloak-box").forEach((box) => {
   box.addEventListener("click", function (e) {
     const rect = this.getBoundingClientRect();
     const ripple = document.createElement("div");

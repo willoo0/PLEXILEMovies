@@ -1,3 +1,7 @@
+body {
+  height: 100vh;
+}
+
 #search-bar {
   position: relative;
   width: 440px;
@@ -64,9 +68,14 @@
   gap: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
+  transition: opacity 0s ease, all 0.3s ease;
   color: #8a8a8a;
-  z-index: 1;
+  z-index: 3;
+  opacity: 1;
+}
+
+#overlay-search-bar.hidden {
+  opacity: 0;
 }
 
 #overlay-search-bar input {
@@ -119,55 +128,59 @@
   width: 175px;
   height: 245px;
   background-color: #362929;
-  border-radius: 6px;
+  border-radius: 5px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   opacity: 0;
-  box-shadow: 1px 1px 3px #000000;
+  box-shadow: 0px 1px 3px #000000;
   transform: translateY(20px);
-  transition: opacity 0.4s ease, transform 0.4s ease, background-color 0.2s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .box::before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  width: 50px;
-  height: 50px;
-  background: rgba(201, 49, 49, 0.4);
-  filter: blur(15px);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease;
-  pointer-events: none;
+  width: 100%;
+  height: 30%;
+  background-image: linear-gradient(to top, rgba(0, 4.1, 9.0, 0.9), rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+  opacity: 1;
+  transition: background-image 0.3s ease-in-out, background-position 0.3s ease-in-out;
 }
 
-.box img {
-  width: 100%;
-  height: 210px;
-  object-fit: cover;
-  border-bottom: 2px solid #291e1e;
-  border-radius: 0px;
+.box:hover::before {
+  background-image: linear-gradient(to top, #5a2424, rgba(0, 0, 0, 0) 100%);
 }
 
 .box .text {
-  width: 100%;
-  padding: 10px;
-  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  z-index: 2;
+  color: rgb(245, 242, 242);
   font-size: 14px;
-  margin-top: -5px;
-  color: white;
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.box:hover {
-  background-color: #423333;
+  opacity: 1;
+  width: 90%; 
+  transition: all 0.4s ease,
 }
 
 #overlay {
@@ -201,4 +214,71 @@
   to {
     opacity: 0;
   }
+}
+
+.error-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 290px;
+  height: 110px;
+  background: #2e2424;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  color: #ffffff;
+  font-size: 16px;
+  gap: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  color: #8a8a8a;
+  z-index: 2;
+  opacity: 0;
+}
+
+.error-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 40px;
+  background: rgba(201, 49, 49, 0.4);
+  filter: blur(15px);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.error-box.show {
+  opacity: 1; 
+}
+
+.error-box .error-icon {
+  font-size: 48px;
+  color: #c9c4c4;
+  margin-bottom: 3px;
+  margin-left: 5px;
+}
+
+.error-box p {
+  color: #c9c4c4;
+  margin-top: 13px;
+  font-size: 15px;
+}
+
+#error-link {
+  color: #C93131;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#error-link:hover {
+  color: #C93131; 
+  text-decoration: underline;
 }
